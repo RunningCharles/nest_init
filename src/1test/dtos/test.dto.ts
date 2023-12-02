@@ -23,11 +23,12 @@
 import { IsString } from 'class-validator';
 
 export class TestQuery {
+  [key: string]: string;
+
   @IsString()
   readonly func: string;
-  [key: string]: string;
 }
 
-export interface TestBody {
+export class TestBody {
   [key: string]: string;
 }
