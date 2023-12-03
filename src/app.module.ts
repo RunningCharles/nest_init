@@ -8,11 +8,11 @@ import { ENV, Utils } from 'src/common/utils';
 @Module({
   imports: [
     ConfigModule.forRoot({
-    isGlobal: true,
-    envFilePath: [`.env.${Utils.env()}`, `.env.${ENV.dev}`]
-  }),
-  TestModule,
-],
+      isGlobal: true,
+      envFilePath: [`.env.${Utils.env()}`, `.env.${ENV.dev}`]
+    }),
+    TestModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
